@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-xs-10">
+    <bn-shopping-list-add [item]="selectedItem" (cleared)="onCleared()"></bn-shopping-list-add>
+    <hr>
+    <ul class="list-group">
+      <a class="list-group-item" style="cursor: pointer" *ngFor="let ingredient of ingredients" 
+          (click)="onSelectItem(ingredient)">{{ingredient.name}} ({{ingredient.amount}})</a>
+    </ul>
+  </div>
+</div>

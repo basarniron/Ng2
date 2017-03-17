@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-12">
+    <a [routerLink]="['new']" class="btn btn-success">New Recipe</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <bn-recipe-item *ngFor="let recipeListItem of recipeList; let i = index" [RecipeItem_Recipe]="recipeListItem" [recipeItemId] = "i" ></bn-recipe-item>      
+    </ul>
+  </div>
+</div>
